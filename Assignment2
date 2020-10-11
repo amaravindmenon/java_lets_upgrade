@@ -45,5 +45,65 @@ public class Main
      Assingment 2  Question 2
 *******************************************************************************/
 
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+import java.util.Scanner;
+import java.util.Date;
+
+class Employee{
+    private String Name;
+    private int db,mb,yb,salery;
+    float tax = 0;
+    Scanner sc = new Scanner(System.in);
+    Date d=new Date();  
+    int year=d.getYear()+1900;
+    int numyrs,intrestrate;
+      
+    Employee(){
+          System.out.println("Enter Employee Name");
+          Name = sc.nextLine();
+          System.out.println("Enter Employee Date or birth");
+          db = sc.nextInt();
+        System.out.println("Enter Employee month or birth");
+          mb = sc.nextInt();
+        System.out.println("Enter Employee year or birth");
+          yb = sc.nextInt();
+        System.out.println("Enter Employee month salery");
+          salery = sc.nextInt();
+    }
+    public void caltax(){
+        numyrs = (year-yb);
+        if(numyrs >= 21 && numyrs <=30)
+            intrestrate = 5;
+        else if(numyrs >= 31 && numyrs <=40)
+            intrestrate = 10;
+        else if(numyrs >= 41 && numyrs <=50)
+            intrestrate = 15;
+         else if(numyrs >=51)
+            intrestrate = 20;
+        
+    }
+    public void display(){
+        caltax();
+        System.out.println("Employee Name is: "+Name);
+        System.out.println(Name+" Dob is: "+db+"-"+mb+"-"+yb);
+        System.out.println(Name+" Monthly Salery is: "+salery);
+        System.out.println(Name+" tax Amount is: "+tax);
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Employee E1 = new Employee();
+	    E1.display();
+	}
+}
 
 
