@@ -45,14 +45,6 @@ public class Main
      Assingment 2  Question 2
 *******************************************************************************/
 
-/******************************************************************************
-
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
-
-*******************************************************************************/
-
 import java.util.Scanner;
 import java.util.Date;
 
@@ -87,14 +79,15 @@ class Employee{
             intrestrate = 15;
          else if(numyrs >=51)
             intrestrate = 20;
-        
+        tax = (salery*intrestrate*numyrs) / 100;
+                System.out.println(numyrs);
     }
     public void display(){
         caltax();
         System.out.println("Employee Name is: "+Name);
         System.out.println(Name+" Dob is: "+db+"-"+mb+"-"+yb);
         System.out.println(Name+" Monthly Salery is: "+salery);
-        System.out.println(Name+" tax Amount is: "+tax);
+        System.out.println(Name+" tax Amount is For "+numyrs+ " Year Is: "+tax);
     }
 }
 
@@ -105,5 +98,3 @@ public class Main
 	    E1.display();
 	}
 }
-
-
