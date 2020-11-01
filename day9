@@ -1,6 +1,4 @@
-//Question 1
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////Question 1
 package letsupgrade;
 
 import java.util.Scanner;
@@ -41,7 +39,7 @@ public class Letsupgrade {
 }
 
 
-//Question 2
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////Question 2
 
 package letsupgrade;
 
@@ -128,5 +126,52 @@ public class Letsupgrade {
         p1.displaydetails();
     }
 }
+////////////////////////////////////////////////////////////////////////////////////////// Question 3
 
-// Question 3
+////////////////////////////////////////////////////////////////////////////////////////// Question 4
+
+package letsupgrade;
+
+import java.util.Scanner;
+class employee{
+    String name;
+    int age;
+    float salery;
+    String designation;
+   public void getdetails(){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the name");
+       name = sc.nextLine();
+       
+       System.out.println("Enter the age");
+       age = sc.nextInt();
+       
+       System.out.println("Enter the designation");
+       designation = sc.nextLine();
+       
+       System.out.println("Enter the salery");
+       salery = sc.nextFloat();
+
+   }
+   public void displaydetails(){
+       System.out.println("Enter the name"+this.name);
+       System.out.println("Enter the age"+this.age);
+       System.out.println("Enter the salery"+this.salery);
+       System.out.println("Enter the designation"+this.designation);
+   }
+}
+
+public class Letsupgrade {
+    public static void main(String[] args) {
+        employee e1 = new employee();
+        employee e2 = new employee();
+        employee e3 = new employee();
+        e1.getdetails();
+        e1.displaydetails();
+        e2.getdetails();
+        e2.displaydetails();
+        e3.getdetails();
+        e3.displaydetails();
+    }
+}
+
